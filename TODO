@@ -1,0 +1,95 @@
+LAB
+- Try the fadeout highlight option function on several browsers.
+- Rework the lab admin logic or add an option for the user to save as admin or individual.
+- Comprarle gomitas a Gerardo.
+- Deshabilitar el boton de registro una ves que se envio el primer request.
+- Agregar una busqueda de sesion cuando se leen los beons de la landing. Hector se registro por otro lado y nunca le llegaron los beons a su cuenta.
+
+USER CHANGE
+- Correr:
+$ php artisan config:clear
+$ php artisan cache:clear
+$ composer dump-autoload
+
+LARAVEL INSTALLATION
+$ sudo chown -R www-data: /var/www/beon
+$ sudo usermod -a -G www-data goecia
+$ composer update --no-scripts
+$ sudo find /var/www/beon -type f -exec chmod 644 {} \;
+$ sudo find /var/www/beon -type d -exec chmod 755 {} \;
+$ sudo chmod -R 775 /var/www/beon
+$ sudo chmod -R 777 /var/www/beon/.git
+$ sudo chmod -R 777 /var/www/beon/vendor
+$ sudo chmod -R 777 /var/www/beon/storage
+$ sudo chmod -R 777 /var/www/beon/bootstrap/cache
+$ sudo chmod -R 777 /var/www/beon/public/beons
+$ sudo chmod -R 777 /var/www/beon/public/audio
+$ sudo chown -R www-data: /var/www/beon
+
+Copy ".env.example" into ".env" and fill the fields with your data
+
+$ composer update --no-scripts
+$ composer dump-autoload -o
+
+SSH CONFIG
+Host 35.160.161.240
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* * if this fails and you're using "sudo" pull and push from repo * *
+* * change the ownership of the folder. You should never have to  * *
+* * use sudo in your local repository.                            * *
+* *                                                               * *
+* * $ sudo chown -R user: folder                                  * *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+COPY FOLDER FROM SSH
+	$ sudo scp -r -i ~/.ssh/id_rsa goecia@beonwords.com:/var/www/beon/public/audio audio
+
+UPDATE INDEX
+	$ git update-index --assume-unchanged path/to/file.txt
+
+GIT REMOTE
+    $ git remote set-url origin /var/www/beon_prod
+    Then, change the push if needed
+    $ git remote set-url --push /var/www/beon_test
+
+LARAVEL QUEUE/JOBS
+	$ php artisan queue:work
+	It will open the listener to listen to jobs for queue (simil RabbitMQ)
+
+DEPENDENCIES
+    sudo apt-get install php7.0-mbstring
+    sudo apt-get install php7.0-dom
+
+REPLACE FILE EXTENSION RECURSIVELY
+    cd /var/www/beon_prod/public/audio && find . -name "*.aac" -exec bash -c 'mv "$1" "${1%.aac}".mp4' - '{}' \;
+
+ALTER TABLE users ADD COLUMN `avatar` VARCHAR(255) NOT NULL DEFAULT 'default.jpg' AFTER `verified`;
+
+ARTISAN CLEARS
+    composer dump-autoload
+    php artisan optimize
+    php artisan cache:clear
+    php artisan config:clear
+    php artisan route:clear
+    php artisan view:clear
+
+CLEAR GITIGNORE INDEX
+    git rm -r --cached .
+    git add .
+    git commit -m ".gitignore is now working"
+
+BEON LAB BUSSINESS LOGIC
+    "El Cilindro" is the default beon. It can be modyfied but it can not be deleted. Everytime a new user is created (registered) it copies the default cilindro beon into its own folder (folder called by the user id). This new beon can be effectively modyfied or deleted by the user. But the original one will still remain with access only to the admins for modification.
+
+VIEW RAW SQL FROM MIGRATIONS
+    php artisan migrate --pretend
+
+SSH LETSENCRYPT
+    # cd /opt/letsencrypt && sudo -H ./letsencrypt-auto certonly --standalone -d beonwords.com -d www.beonwords.com -d api.beonwords.com -d test.beonwords.com
+    cd /opt/letsencrypt && sudo -H ./letsencrypt-auto 

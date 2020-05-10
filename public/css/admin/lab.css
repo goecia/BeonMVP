@@ -1,0 +1,297 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+	margin: 0 auto;
+}
+
+hr {
+	clear: both;
+}
+
+select {
+    width: 100%;
+    max-width: 100%;
+}
+
+:focus{
+    outline: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.iframe {
+    text-align: left;
+    /*width: calc(100% - 22px);*/
+    height: 87vh;
+    border: 1px solid;
+    padding: 5px 5px;
+    margin: 0px 5px 5px 5px;
+    overflow: auto;
+    background-color: #f0f0f0;
+}
+
+.container {
+	height: 100%;
+	width: 100vw;
+	float: left;
+}
+
+.left {
+	width: calc(20% - 2px);
+    /*height: calc(100% - 2px);*/
+    height: calc(100vh - 2px);
+	/*height: 100%;*/
+	float: left;
+	text-align: center;
+	background-color: #bdbdbd;
+    border: 1px solid;
+}
+
+.middle {
+    width: 55%;
+    /*height: calc(100% - 2px);*/
+    height: calc(100vh - 2px);
+	/*height: 100%;*/
+	float: left;
+	text-align: center;
+	background-color: #a8a8a8;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.right {
+	width: calc(25% - 2px);
+    /*height: calc(100% - 2px);*/
+    height: calc(100vh - 2px);
+	/*height: 100%;*/
+	float: right;
+	text-align: center;
+	background-color: #bdbdbd;
+    border: 1px solid;
+}
+
+.test-beon {
+    margin: 5px 5px;
+}
+
+.ambient-container {
+	width: 33%;
+	float: left;
+}
+
+.fx-container {
+	width: 33%;
+	float: left;
+}
+
+.music-container {
+	width: 33%;
+	float: left;
+}
+
+.status {
+    margin-top: 5px;
+    font-weight: 800;
+    color: #F62217;
+}
+
+.teheader {
+    background: url(../../assets/header-bg.gif) repeat;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    margin: 5px 5px 0px 5px;
+    text-align: center;
+}
+
+.tedivider {
+    display: inline-block;
+    width: 1px;
+    height: 30px;
+    background: #ccc;
+}
+
+.button-bold {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -118px;
+}
+
+.button-italic {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -148px;
+}
+
+.button-underline {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -178px;
+}
+
+.button-strikethrough {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -208px;
+}
+
+.button-ordered-list {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -298px;
+}
+
+.button-unordered-list {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -328px;
+}
+
+.button-outdent {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -358px;
+}
+
+.button-indent {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -390px;
+}
+
+.button-justify-left {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -418px;
+}
+
+.button-justify-center {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -448px;
+}
+
+.button-justify-right {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -478px;
+}
+
+.button-justify-full {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -508px;
+}
+
+.button-undo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -538px;
+}
+
+.button-redo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -568px;
+}
+
+.trigger-ambient {
+    color: red;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.trigger-fx {
+    color: blue;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.trigger-music {
+    color: green;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.trigger-silence {
+    color: black;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.trigger-info {
+    position: absolute;
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin: 20px 0px 0px 0px;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 10;
+}
+
+.modal-loading{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    overflow: hidden;
+    background: rgba(0,0,0, 0.7)
+                url('../../assets/loader_beon.gif') 
+                50% 50% 
+                no-repeat;
+}

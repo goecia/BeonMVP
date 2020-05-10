@@ -1,0 +1,532 @@
+@import url( '_normalize.css' );
+@import url( '_defaults.css' );
+
+html{
+    pointer-events: auto;
+}
+
+/*span {
+  color: red;
+}*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header{
+    height: 72px;
+    background: #4cd9bd; //#4c626f
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0 3px 2px rgba(0,0,0,.2);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+}
+
+header>div{
+    height: inherit;
+    padding: 6px;
+    margin: 0 0px;
+    width: 60px;
+    text-align: center;
+    color: #4c626f;
+    //background-color: rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+h1{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 0 4em 0;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ccc;
+}
+
+h2{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding: 2em 0 0 0;
+    margin-bottom: 1em;
+    border-top: 1px solid #ccc;
+}
+
+p{
+    margin-bottom: 1em;
+    line-height:1.5em;
+}
+
+.noselectable{
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Likely future */        
+}
+
+.clear{
+    clear: both;
+}
+
+.nodisplay{
+    display: none;
+}
+
+.icono_header{
+    float: right;
+    padding-top: 16px;
+}
+
+.icono_header_left{
+    float: left;
+    padding-top: 16px;
+}
+
+.book{
+    padding: 0 20%;
+    text-align: justify;
+    font-size: 1.4em;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+.modal{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    overflow: hidden;
+    background: rgba(76,217,189, 1)
+                url('../../assets/demo/loader_beon.gif')
+                50% 50% 
+                no-repeat;
+}
+
+.follower{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(rgba(255,255,255,1) 20%, rgba(0,0,0,1) 30%, rgba(255,255,255,1) 80%); /*Safari 5.1-6*/
+    background: -o-linear-gradient(rgba(255,255,255,1) 20%, rgba(0,0,0,1) 30%, rgba(255,255,255,1) 80%); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(rgba(255,255,255,1) 20%, rgba(0,0,0,1) 30%, rgba(255,255,255,1) 80%); /*Fx 3.6-15*/
+    background: linear-gradient(rgba(255,255,255,.9) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,.9) 80%); /*Standard*/
+    //background: rgba(255,255,255,.5);
+    width: 100%;
+    pointer-events: none;
+}
+
+.titulo{
+    width: 120px;
+    float: left;
+    padding-top: 24px;
+    //padding-left: 26px;
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: left;
+    cursor: text;
+}
+
+.loading{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10% auto;
+    margin-bottom: 1em;
+}
+
+.poll{
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding-top: 15%;
+}
+
+/* MATERIAL ICONS */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+    url(../../assets/demo/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+    url(../../assets/demo/iconfont/MaterialIcons-Regular.woff) format('woff'),
+    url(../../assets/demo/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18{ font-size: 18px; }
+.material-icons.md-24{ font-size: 24px; }
+.material-icons.md-36{ font-size: 36px; }
+.material-icons.md-48{ font-size: 48px; }
+.material-icons.md-60{ font-size: 60px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark{ color: #4c626f }
+.material-icons.md-dark.md-inactive{ color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light{ color: #4cd9bd; }
+.material-icons.md-light.md-inactive{ color: rgba(255, 255, 255, 0.3); }
+/* MATERIAL ICONS */
+
+#switch-settings:active>i{
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Safari */
+    transform: rotate(30deg);
+    transition:.1s;
+}
+
+.settings_open{
+    background: #4c626f;
+}
+
+.settings{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    height: 250px;
+    padding-top: 72px;
+    background-color: #4c626f;
+    z-index: 11;
+    box-shadow: 0 3px 2px rgba(0,0,0,.2);
+    background: #4c626f url('../../assets/demo/logo_settings.png') 8% 90% no-repeat;
+    background-size: 100px 65px ;
+}
+
+.settings>div{
+    float: right;
+    text-align: center;
+}
+
+.font_size, .scroll_speed{
+    width: 40px;
+    margin: 20px 10px 0 20px;
+    //background-color: rgba(0,0,0,.2);
+}
+
+.icon_plus{
+    cursor: pointer;
+    background: #4cd9bd;
+    display: inline-block;
+    height: 40px;
+    position: relative;
+    width: 40px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.icon_plus:before{
+    border-top: 8px solid #4cd9bd;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    margin-left: 4px;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 40px;
+    width: 0;
+}
+
+.icon_minus{
+    cursor: pointer;
+    background: #4cd9bd;
+    display: inline-block;
+    height: 40px;
+    position: relative;
+    width: 40px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-top: 6px;
+
+}
+.icon_minus:before{
+    border-bottom: 8px solid #4cd9bd;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    margin-right: 4px;
+    content: "";
+    height: 0;
+    right: 0;
+    position: absolute;
+    top: -8px;
+    width: 0;
+}
+
+.icon_plus:active, .icon_minus:active{
+    background-color: rgba(255,255,255, 1);
+    opacity: .2;
+}
+
+/* Animation splash */
+.splash, .splash_cont, .splash_loader{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.splash_loader img{
+  width: 30%;
+  max-width: 160px;
+  display: block;
+  margin: 0 auto 10% auto;
+  position: relative;
+  top: 26%;
+  opacity: .7;
+}
+
+.splash_cargando{
+  color: #4cd9bd;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  position: relative;
+  top: 26%;
+}
+
+.splash{
+  background-image: url('../../assets/demo/texto_blur.jpg');
+  background-position: 50% 0%;
+  background-size: 130%;
+  background-repeat: repeat-y;
+  animation: splash_text_anim 60s infinite linear;
+}
+
+@keyframes splash_text_anim{
+  0%{
+    background-position: 50% 0%;
+  }
+  100%{
+    background-position: 50% 200%;
+  }
+}
+
+.splash_gradiente_blanco{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  background: -webkit-linear-gradient(rgba(255,255,255,1) 20%, rgba(0,0,0,1) 30%, rgba(255,255,255,1) 80%); /*Safari 5.1-6*/
+  background: -o-linear-gradient(rgba(255,255,255,1) 20%, rgba(0,0,0,1) 30%, rgba(255,255,255,1) 80%); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(rgba(255,255,255,1) 20%, rgba(0,0,0,1) 30%, rgba(255,255,255,1) 80%); /*Fx 3.6-15*/
+  background: linear-gradient(rgba(255,255,255,.9) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,.9) 80%); /*Standard*/
+}
+
+.splash_gradiente{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  opacity: .9;
+  background: -moz-linear-gradient(top, rgba(76,217,189,1) 0%, rgba(76,98,111,1) 80%, rgba(76,98,111,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,217,189,1)), color-stop(80%, rgba(76,98,111,1)), color-stop(100%, rgba(76,98,111,1)));
+  background: -webkit-linear-gradient(top, rgba(76,217,189,1) 0%, rgba(76,98,111,1) 80%, rgba(76,98,111,1) 100%);
+  background: -o-linear-gradient(top, rgba(76,217,189,1) 0%, rgba(76,98,111,1) 80%, rgba(76,98,111,1) 100%);
+  background: -ms-linear-gradient(top, rgba(76,217,189,1) 0%, rgba(76,98,111,1) 80%, rgba(76,98,111,1) 100%);
+  background: linear-gradient(to bottom, rgba(76,217,189,1) 0%, rgba(76,98,111,1) 80%, rgba(76,98,111,1) 100%);
+}
+
+.splash_logo{
+  width: 96%;
+  max-width: 300px;
+  //height: 10%;
+  margin: 0 auto;
+}
+
+.splash_logo img{
+  width: 100%;
+}
+
+.splash_texto{
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 8%;
+}
+
+.splash_texto>b{
+  font-weight: 400;
+}
+
+.splash_texto span{
+  font-size: 20px;
+}
+
+.splash_cont_aviso{
+  display: table;
+  margin: 0 auto;
+}
+
+.splash_headset{
+  float: left;
+}
+
+.splash_aviso{
+  float: left;
+  padding: 0 10px;
+  color: #4cd9bd;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.splash_bottom_10prcnt{
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+
+.splash_top_20prcnt{
+  position: absolute;
+  top: 10%;
+  width: 60%;
+  margin: 0 20%;
+}
+
+.splash_btn, .poll_btn{
+  cursor: pointer;
+  background: #4cd9bd;
+  display: inline-block;
+  //height: 40px;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+
+  font-weight: 400;
+  font-style: italic;
+  font-size: 30px;
+  text-align: center;
+  color: #4c626f;
+  margin-top: 3%;
+}
+.splash_btn:before{
+  border-bottom: 8px solid #4cd9bd;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  margin-left: 4px;
+  content: "";
+  height: 0;
+  left: 12%;
+  margin-left: -8px;
+  position: absolute;
+  top: -8px;
+  width: 0;
+}
+
+.splash_btn:hover{
+  color: #fff;
+}
+
+.splash_btn:active{
+  background-color: rgba(255,255,255, .6);
+  opacity: .2;
+}
+/* End Animation splash */
+
+/* Desktops and laptops ----------- */
+@media only screen and (max-width : 1824px){
+    .book{
+        padding: 0 15%;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (max-width : 1224px){
+    .book{
+        padding: 0 15%;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (max-width : 1024px){
+    .book{
+        padding: 0 10%;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 768px){
+    .book{
+        padding: 0 10%;
+    }
+}
+
+/* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
+@media only screen and (max-width : 640px){
+    .book{
+        padding: 0 5%;
+        font-size: 1.2em;
+    }
+}
+
+/* Smartphones (portrait) (ie: Galaxy 1) */
+@media only screen and (max-width : 321px){
+    .book{
+        padding: 0 5%;
+        font-size: 1.2em;
+    }
+    header{
+      height: 56px;
+    }
+    header>div{
+      width: 50px;
+    }
+    .titulo{
+      font-size: 1em;
+      padding-top: 22px;
+    }
+    .material-icons.md-36{ font-size: 28px; }
+    .icon_plus .material-icons , .icon_minus .material-icons {
+      padding-top: 6px;
+    }
+}

@@ -1,0 +1,203 @@
+:focus{
+    outline: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.iframe {
+    text-align: left;
+    height: 80vh;
+    border: 1px solid;
+    padding: 5px 5px;
+    margin: 0px 5px 5px 5px;
+    overflow-x: hidden;
+    background-color: #f0f0f0;
+}
+
+.left {
+    float: left;
+}
+
+.middle {
+    float: left;
+    text-align: center;
+    background-color: #a8a8a8;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.right {
+    float: right;
+}
+
+.status {
+    margin-top: 5px;
+    font-weight: 800;
+    color: #F62217;
+}
+
+.button-image > input {
+    display: none;
+}
+
+.teheader {
+    background: url(../../assets/header-bg.gif) repeat;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    margin: 5px 5px 0px 5px;
+    text-align: center;
+}
+
+.tedivider {
+    display: inline-block;
+    width: 1px;
+    height: 30px;
+    background: #ccc;
+}
+
+.button-bold {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -118px;
+}
+
+.button-italic {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -148px;
+}
+
+.button-underline {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -178px;
+}
+
+.button-strikethrough {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -208px;
+}
+
+.button-ordered-list {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -298px;
+}
+
+.button-unordered-list {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -328px;
+}
+
+.button-outdent {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -358px;
+}
+
+.button-indent {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -390px;
+}
+
+.button-justify-left {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -418px;
+}
+
+.button-justify-center {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -448px;
+}
+
+.button-justify-right {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -478px;
+}
+
+.button-justify-full {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -508px;
+}
+
+.button-undo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -538px;
+}
+
+.button-redo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -568px;
+}
+
+.button-image {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -598px;
+}
+
+.button-create-link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../../assets/icons.png);
+    background-position: 34px -658px;
+}

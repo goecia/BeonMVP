@@ -1,0 +1,150 @@
+.cont_color {
+  color: #fff
+}
+
+.bg_blue{
+  background-color: #56b7e3;
+}
+
+.bg_pink{
+  background-color: #f8699b;
+}
+
+.bg_green{
+  background-color: #4cd9bd;
+}
+
+.quote{
+  color: rgba(255, 255, 255, .5);
+  font-family: 'Bad Script', cursive;
+  font-size: 300%;
+  line-height: 150%;
+  text-align: right;
+  max-width: 80%;
+  position: relative;
+  left: 10%;
+ }
+
+.more-info .quote{
+  color: #fff;
+ }
+
+.dialog{
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 220%;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+  max-width: 80%;
+  position: relative;
+  left: 10%;
+  padding-top: 4%;
+}
+
+.dialog_box {
+  display: inline-block;
+  padding: 10%;
+  position: relative;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  border: 3px solid;
+  border-color: rgba(255,255,255, .2);
+}
+
+.dialog_1:before {
+  border-right: 25px solid #fff;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right-color: rgba(255,255,255, .2);
+  content: "";
+  margin-left: -25px;
+  position: absolute;
+  top: 50px;
+}
+
+.dialog_2:before {
+  border-left: 25px solid #fff;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left-color: rgba(255,255,255, .2);
+  content: "";
+  margin-right: -25px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+.flechita_top:before{
+  border-top: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top-color: #cacaca;
+  content: "";
+  margin-top: 10px;
+  margin-left: -10px;
+  margin-bottom: 10px;
+  position: relative;
+  top: 0px;
+  left: 50%;
+}
+
+
+
+/*   SABER MAS   */
+.iconos_sabermas img{
+  width: 100%;
+  max-width: 160px;
+  padding: 1em 0;
+}
+
+.logo_timeline img{
+  width: 70%;
+  max-width: 320px;
+}
+
+
+@media (max-width: 991px){
+  .dialog_1:before, .dialog_2:before {
+    border-bottom: 25px solid #fff;
+    border-right: 25px solid transparent;
+    border-left: 25px solid transparent;
+    border-bottom-color: rgba(255,255,255, .2);
+    content: "";
+    margin-top: 0;
+    position: relative;
+    top: -22px;
+    left: 12px;
+  }
+}
+
+@media (max-width: 768px){
+  .landing-page .prueba .title.slogan{
+    font-size: 1.2em;
+  }
+  
+  .quote{
+    font-size: 240%;
+  }
+}
+
+
+
+
+/* POST TUTO */
+.post-tuto .quote{
+  color: #fff;
+ }
+
+.post-tuto h1.title{
+  font-style: italic;
+  margin-bottom: 10vh;
+} 
+
+@media (min-width: 768px){
+  .post-tuto .quote{
+    bottom: 100px;
+  }
+}
+/* FIN POST TUTO */

@@ -1,0 +1,49 @@
+html, body {
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.beon-color {
+    background-color: rgba(76,217,189, 1);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+.modal-loading{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    overflow: hidden;
+    background: rgba(0,0,0, 0.7)
+                url('../../assets/loader_beon.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+.status {
+    min-height: 30px;
+    margin-top: 10px;
+    font-weight: 800;
+    color: #F62217;
+}
+
+.panel {
+    margin-top: 50px;
+}
